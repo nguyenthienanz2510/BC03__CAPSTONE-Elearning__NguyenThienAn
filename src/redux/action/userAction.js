@@ -38,6 +38,8 @@ export const setUserRegisterActionService = (
   handleFail = () => {}
 ) => {
   return (dispatch) => {
+    dataRegister.maNhom = "GP04";
+    console.log(dataRegister);
     userService
       .postRegister(dataRegister)
       .then((res) => {
@@ -50,7 +52,7 @@ export const setUserRegisterActionService = (
       })
       .catch((err) => {
         console.log(err);
-        message.warning(err.response.data);
+        handleFail(err.response.data);
       });
   };
 };

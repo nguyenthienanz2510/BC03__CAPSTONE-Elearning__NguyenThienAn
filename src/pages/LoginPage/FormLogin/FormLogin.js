@@ -70,11 +70,11 @@ export default function FormLogin() {
       </Form.Item>
       <div className="text-center">
         <NavLink to="/register">
-          <a className="text-secondary mr-5 hover:underline">Đăng ký</a>
+          <a className="text-color-secondary mr-5 hover:underline">Đăng ký</a>
         </NavLink>
 
         <Button
-          className="hover:text-white hover:bg-primary rounded text-primary bg-white px-5 border-primary hover:border-primary"
+          className="hover:text-white hover:bg-color-primary rounded text-color-primary bg-white px-5 hover:border-color-primary border-color-primary"
           htmlType="submit"
         >
           Đăng nhập

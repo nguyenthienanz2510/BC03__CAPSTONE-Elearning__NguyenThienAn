@@ -18,7 +18,7 @@ const MobileMenu = () => {
     <>
       <div className="md:hidden">
         <button
-          className="px-5 :py-2 hover:text-primary transition-all"
+          className="px-5 :py-2 hover:text-primary transition-all hover:text-color-primary"
           onClick={() => {
             openMobileModal();
           }}
@@ -26,7 +26,7 @@ const MobileMenu = () => {
           <FontAwesomeIcon className="text-4xl " icon={faBars} />
         </button>
         <div id="myModal" className="mobileMenuModal">
-          <div className="mobileMenuModalContent bg-color-background">
+          <div className="mobileMenuModalContent bg-white">
             <UserNav />
 
             <ul className="text-xl py-10 px-5">
@@ -39,7 +39,7 @@ const MobileMenu = () => {
                   smooth={true}
                   duration={500}
                 >
-                  <a className="hover:text-primary">Lịch chiếu</a>
+                  <a className="hover:text-color-primary">Lịch chiếu</a>
                 </Link>
               </li>
               <li className="mb-4">
@@ -51,7 +51,10 @@ const MobileMenu = () => {
                   smooth={true}
                   duration={500}
                 >
-                  <a className="hover:text-primary" href="#MovieTabs-wrapper">
+                  <a
+                    className="hover:text-color-primary"
+                    href="#MovieTabs-wrapper"
+                  >
                     Cụm rạp
                   </a>
                 </Link>

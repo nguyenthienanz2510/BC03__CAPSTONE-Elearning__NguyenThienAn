@@ -11,7 +11,7 @@ export default function UserNav() {
     return state.userReducer.userInfo;
   });
   let handleLogout = () => {
-    localStorageService.removeUserInfor();
+    localStorageService.removeUserInfo();
     window.location.href = "/login";
   };
   return (
@@ -38,12 +38,12 @@ export default function UserNav() {
       ) : (
         <div className="px-3">
           <NavLink to={"/register"}>
-            <button className="text-xl md:text-sm ml-1 px-5 py-2 rounded border-2 border-primary hover:text-white hover:bg-primary transition-all">
+            <button className="min-w-[142px] md:min-w-[110px] my-1 text-xl md:text-sm ml-1 px-5 py-2 rounded border-2 border-color-primary hover:text-white text-color-primary hover:bg-color-primary transition-all">
               Đăng ký
             </button>
           </NavLink>
           <NavLink to={"/login"}>
-            <button className="text-xl md:text-sm ml-1 px-5 py-2 rounded border-2 border-primary hover:text-white hover:bg-primary transition-all">
+            <button className="min-w-[142px] md:min-w-[110px] my-1 text-xl md:text-sm ml-1 px-5 py-2 rounded border-2 border-color-primary hover:text-white text-color-primary hover:bg-color-primary transition-all">
               Đăng nhập
             </button>
           </NavLink>
