@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import SpinnerComponent from "./components/SpinnerComponent/SpinnerComponent";
 import { usePublicRoutes } from "./routes/useRoutes";
-// import SpinnerComponent from "./components/SpinnerComponent/SpinnerComponent";
 
 function App() {
   return (
     <div className="">
-      {/* <SpinnerComponent /> */}
+      <SpinnerComponent />
       <BrowserRouter>
         <Switch>
           {usePublicRoutes.map((route, index) => {

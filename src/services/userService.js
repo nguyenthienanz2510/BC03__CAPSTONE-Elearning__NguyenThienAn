@@ -24,29 +24,15 @@ export const userService = {
       },
     });
   },
-  // getUserInfor: () => {
-  //   return axios.post(
-  //     `${BASE_URL}/api/QuanLyNguoiDung/LayThongTinNguoiDung`,
-  //     "",
-  //     {
-  //       headers: {
-  //         TokenCybersoft: TOKEN_CYBERSOFT,
-  //         Authorization:
-  //           "Bearer " + localStorageService.getUserInfor()?.accessToken,
-  //       },
-  //     }
-  //   );
-  // },
-
-  getAccountInfor: () => {
+  postUserInfo: () => {
     return axios.post(
-      `${BASE_URL}/api/QuanLyNguoiDung/ThongTinTaiKhoan`,
+      `${BASE_URL}/api/QuanLyNguoiDung/ThongTinNguoiDung`,
       null,
       {
         headers: {
           TokenCybersoft: TOKEN_CYBERSOFT,
           Authorization:
-            "Bearer " + localStorageService.getUserInfor()?.accessToken,
+            "Bearer " + localStorageService.getUserInfo()?.accessToken,
         },
       }
     );

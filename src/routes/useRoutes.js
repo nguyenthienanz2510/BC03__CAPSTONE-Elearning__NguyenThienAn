@@ -1,4 +1,5 @@
 import MainLayout from "../HOC/MainLayout";
+import CategoryPage from "../pages/CategoryPage/CategoryPage";
 import DetailPage from "../pages/DetailPage/DetailPage";
 import HomePage from "../pages/HomePage/HomePage";
 import LoginPage from "../pages/LoginPage/LoginPage";
@@ -15,6 +16,11 @@ export const usePublicRoutes = [
   {
     path: "/detail/:id",
     component: <MainLayout Component={DetailPage} />,
+    isUseLayout: true,
+  },
+  {
+    path: "/category/:id",
+    component: <MainLayout Component={CategoryPage} />,
     isUseLayout: true,
   },
   {

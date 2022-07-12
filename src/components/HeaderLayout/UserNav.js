@@ -14,18 +14,19 @@ export default function UserNav() {
     localStorageService.removeUserInfo();
     window.location.href = "/login";
   };
+
   return (
     <div>
       {userInfo ? (
-        <div className="pt-6 md:pt-0 md:px-3 md:ml-auto md:block flex justify-between">
-          <NavLink to={"/user"} className="hover:text-primary">
-            <span className="font-medium text-xl md:text-lg ">
+        <div className="py-5 md:py-0  md:px-3 md:ml-auto md:block flex justify-between border-b md:border-none">
+          <NavLink to={"/user"} className="hover:text-color-primary">
+            <span className="font-medium text-2xl leading-[50px] md:text-lg ">
               {userInfo.taiKhoan}
             </span>
           </NavLink>
           <button
             onClick={handleLogout}
-            className="px-3 md:py-2 hover:text-primary transition-all"
+            className="px-3 md:py-2 hover:text-color-primary transition-all"
           >
             <Tooltip placement="bottomRight" title="Log out" color="#ff6500">
               <FontAwesomeIcon

@@ -3,6 +3,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import UserNav from "./UserNav";
 import { Link } from "react-scroll";
 import "./MobileMenu.scss";
+import CategoryCourseMenu from "./CategoryCourseMenu/CategoryCourseMenu";
 
 const MobileMenu = () => {
   const openMobileModal = () => {
@@ -28,38 +29,7 @@ const MobileMenu = () => {
         <div id="myModal" className="mobileMenuModal">
           <div className="mobileMenuModalContent bg-white">
             <UserNav />
-
-            <ul className="text-xl py-10 px-5">
-              <li className="mb-4">
-                <Link
-                  activeClass="active"
-                  className="test1"
-                  to="MovieCarousel"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  <a className="hover:text-color-primary">Lịch chiếu</a>
-                </Link>
-              </li>
-              <li className="mb-4">
-                <Link
-                  activeClass="active"
-                  className="test1"
-                  to="MovieTabs"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  <a
-                    className="hover:text-color-primary"
-                    href="#MovieTabs-wrapper"
-                  >
-                    Cụm rạp
-                  </a>
-                </Link>
-              </li>
-            </ul>
+            <CategoryCourseMenu />
           </div>
         </div>
       </div>

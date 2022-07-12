@@ -4,7 +4,7 @@ import HeaderLayout from "../components/HeaderLayout/HeaderLayout";
 
 export default function MainLayout({ Component }) {
   return (
-    <div className="min-h-screen bg-color-background">
+    <div className="min-h-screen">
       <HeaderLayout />
       <Component />
       <FooterLayout />
