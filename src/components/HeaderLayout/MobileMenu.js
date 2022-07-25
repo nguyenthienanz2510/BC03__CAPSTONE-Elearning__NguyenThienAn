@@ -4,6 +4,7 @@ import UserNav from "./UserNav";
 import { Link } from "react-scroll";
 import "./MobileMenu.scss";
 import CategoryCourseMenu from "./CategoryCourseMenu/CategoryCourseMenu";
+import Search from "./Search";
 
 const MobileMenu = () => {
   const openMobileModal = () => {
@@ -26,9 +27,13 @@ const MobileMenu = () => {
         >
           <FontAwesomeIcon className="text-4xl " icon={faBars} />
         </button>
+
         <div id="myModal" className="mobileMenuModal">
           <div className="mobileMenuModalContent bg-white">
             <UserNav />
+            <div className="my-5">
+              <Search />
+            </div>
             <CategoryCourseMenu />
           </div>
         </div>

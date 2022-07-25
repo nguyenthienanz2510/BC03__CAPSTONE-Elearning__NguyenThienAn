@@ -37,4 +37,17 @@ export const userService = {
       }
     );
   },
+  putEditUserInfo: (data) => {
+    return axios.put(
+      `${BASE_URL}/api/QuanLyNguoiDung/CapNhatThongTinNguoiDung`,
+      data,
+      {
+        headers: {
+          TokenCybersoft: TOKEN_CYBERSOFT,
+          Authorization:
+            "Bearer " + localStorageService.getUserInfo()?.accessToken,
+        },
+      }
+    );
+  },
 };

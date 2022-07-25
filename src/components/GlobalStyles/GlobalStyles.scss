@@ -24,6 +24,16 @@
 }
 
 body {
+    font-family: 'Raleway', sans-serif;
+    text-rendering: optimizeSpeed;
     color: var(--color-text);
     line-height: 1.5;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
 }

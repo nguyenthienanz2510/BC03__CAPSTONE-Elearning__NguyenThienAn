@@ -4,6 +4,7 @@ import MobileMenu from "./MobileMenu";
 import UserNav from "./UserNav";
 import { Link } from "react-scroll";
 import CategoryCourseMenu from "./CategoryCourseMenu/CategoryCourseMenu";
+import Search from "./Search";
 
 export default function HeaderLayout() {
   return (
@@ -15,20 +16,11 @@ export default function HeaderLayout() {
           </div>
         </NavLink>
 
-        <div className="text-base hidden md:block px-4">
-          {/* <Link
-          activeClass="active"
-          className="test1"
-          to="MovieCarousel"
-          spy={true}
-          smooth={true}
-          duration={500}
-        >
-          <NavLink to={"/"}>
-            <a className="hover:text-primary">Danh sách khóa học</a>
-          </NavLink>
-        </Link> */}
+        <div className="text-base hidden md:block px-4 min-w-[220px]">
           <CategoryCourseMenu />
+        </div>
+        <div className="text-base hidden md:block">
+          <Search />
         </div>
       </div>
       <MobileMenu />

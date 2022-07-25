@@ -12,6 +12,15 @@ export const courseService = {
       },
     });
   },
+  getSearchListCourses: (input) => {
+    return axios({
+      method: "GET",
+      url: `${BASE_URL}/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?tenKhoaHoc=${input}&MaNhom=GP01`,
+      headers: {
+        TokenCybersoft: TOKEN_CYBERSOFT,
+      },
+    });
+  },
   getCategoryCourse: () => {
     return axios({
       method: "GET",

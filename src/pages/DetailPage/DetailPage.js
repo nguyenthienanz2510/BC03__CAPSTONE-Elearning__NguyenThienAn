@@ -32,28 +32,35 @@ export default function DetailPage() {
     window.scrollTo(0, 0);
   }, []);
   const user = useSelector((state) => state.userReducer.userInfo);
+  console.log(user);
   const onSubmitRegisterCourse = (idCourse) => {
-    let data = {
-      maKhoaHoc: idCourse,
-      taiKhoan: user.taiKhoan,
-    };
-    console.log(data);
-    dispatch(handleStartSpinner());
-    courseService
-      .postRegisterCourse(data)
-      .then((res) => {
-        console.log(res);
-        dispatch(handleEndSpinner());
-        alert(res.data + " vui lòng kiểm tra khóa học tại trang User.");
-      })
-      .catch((err) => {
-        console.log(err);
-        dispatch(handleEndSpinner());
-        alert(err.response.data);
-      });
+    if (user == null) {
+      alert(
+        "Bạn chưa đăng nhập! Vui lòng đăng nhập trước khi đăng ký khóa học!"
+      );
+    } else {
+      let data = {
+        maKhoaHoc: idCourse,
+        taiKhoan: user.taiKhoan,
+      };
+      console.log(data);
+      dispatch(handleStartSpinner());
+      courseService
+        .postRegisterCourse(data)
+        .then((res) => {
+          console.log(res);
+          dispatch(handleEndSpinner());
+          alert(res.data + " vui lòng kiểm tra khóa học tại trang User.");
+        })
+        .catch((err) => {
+          console.log(err);
+          dispatch(handleEndSpinner());
+          alert(err.response.data);
+        });
+    }
   };
   return (
-    <div className="pt-24 space-y-10 min-h-screen container mx-auto">
+    <div className="pt-24 pb-10 space-y-10 min-h-screen container mx-auto">
       <h2 className="font-bold text-2xl">{course.tenKhoaHoc}</h2>
       <div className="sm:flex">
         <div className="w-full sm:w-1/2">

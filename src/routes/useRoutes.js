@@ -4,6 +4,7 @@ import DetailPage from "../pages/DetailPage/DetailPage";
 import HomePage from "../pages/HomePage/HomePage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
+import SearchPage from "../pages/SearchPage/SearchPage";
 import UserPage from "../pages/UserPage/UserPage";
 
 export const usePublicRoutes = [
@@ -21,6 +22,11 @@ export const usePublicRoutes = [
   {
     path: "/category/:id",
     component: <MainLayout Component={CategoryPage} />,
+    isUseLayout: true,
+  },
+  {
+    path: "/search/:input",
+    component: <MainLayout Component={SearchPage} />,
     isUseLayout: true,
   },
   {
