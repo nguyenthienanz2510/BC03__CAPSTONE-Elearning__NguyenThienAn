@@ -8,7 +8,7 @@ export default function FooterLayout() {
     <div className=" w-full border-t py-10">
       <div className="container mx-auto h-full">
         <div>
-          <span className="mr-2">GET SOCIAL</span>
+          <span className="mr-20">GET SOCIAL</span>
           <a
             className="text-xl ml-2 hover:text-color-primary"
             href="https://www.facebook.com/lophocviet/"
